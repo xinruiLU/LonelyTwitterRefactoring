@@ -1,8 +1,5 @@
 package ca.ualberta.cs.lonelytwitter;
 
-import java.util.Date;
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +7,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.Date;
+import java.util.List;
 
 public class LonelyTwitterActivity extends Activity {
 
@@ -40,7 +40,7 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
-	public void save(View v) {
+	public void save() {
 		String text = bodyText.getText().toString();
 
 		NormalLonelyTweet tweet;

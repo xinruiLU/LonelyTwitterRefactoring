@@ -1,5 +1,8 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import android.content.Context;
+import android.util.Log;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -9,11 +12,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
-import android.util.Log;
-
 public class TweetsFileManager {
-
+	private static final String FILE_NAME = "file.sav";
 	private Context ctx;
 
 	public TweetsFileManager(Context ctx) {
@@ -21,6 +21,7 @@ public class TweetsFileManager {
 	}
 
 	@SuppressWarnings("unchecked")
+
 	public List<NormalLonelyTweet> loadTweets() {
 		List<NormalLonelyTweet> tweets = new ArrayList<NormalLonelyTweet>();
 
